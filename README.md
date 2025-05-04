@@ -1,1 +1,1 @@
-# METAG
+# Metagenomic analysis SLURM scripts
