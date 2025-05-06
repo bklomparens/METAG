@@ -29,4 +29,6 @@ bowtie2 -x $INPUT_DIR/contigs_index -1 fastq/file1.fq1 -2 fastq/file1.fq2 -S $OU
 samtools view -bS $OUTPUT_DIR/MIS/file1.sam | samtools sort -o $OUTPUT_DIR/MIS/file1.bam
 samtools index $OUTPUT_DIR/MIS/file1.bam
 
+# CAVEAT: if subsequent jobs fail, you can delete "contigs_index" and re-generate it for each job. Again a pain, but it works
+
 echo "Ending: "`date +"%D %T"`
