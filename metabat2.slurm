@@ -13,7 +13,7 @@ echo "Node: $\{SLURMD_NODENAME\}"
 echo "Starting: "`date +"%D %T"`
 
 metabat2 -i megahit_SITE/final.contigs.fa -a mapped/SITE/metabat_depth.txt -o bins_dir/bin
-# metabat2 does not allow you to create an output directory, you can organize output after they are generated
+# metabat2 does not allow you to create an output directory, you can organize output after bins are generated
 # for my workflow, I rename the generated output directory as so: bins_dir_SITE
 
 echo "Ending: "`date +"%D %T"`
