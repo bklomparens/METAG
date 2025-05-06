@@ -12,7 +12,8 @@ echo "Job ID: $\{SLURM_JOB_ID\}"
 echo "Node: $\{SLURMD_NODENAME\}" 
 echo "Starting: "`date +"%D %T"`
 
-# you must create the output directory "mapped" BEFORE running this script (the tool cannot create it), or it will fail
+# you must create the output directory "mapped" and the nested directory for each site BEFORE running this script 
+# (the tool cannot create directories), or the job will fail
 INPUT_DIR="megahit_SITE"
 OUTPUT_DIR="mapped"
 
