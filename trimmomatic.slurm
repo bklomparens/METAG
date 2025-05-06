@@ -13,7 +13,7 @@ echo "Node: ${SLURMD_NODENAME}"
 echo "Starting: $(date +"%D %T")"
 
 # list of sample IDs based on the names of your fastq files, by site
-samples=(sample# sample# sample#)
+samples=(file1 file2 file3)
 
 # this for loop will run all samples in the above list, provided your naming scheme matches
 for sample in "${samples[@]}"; do
