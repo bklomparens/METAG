@@ -12,7 +12,7 @@ echo "Job ID: $\{SLURM_JOB_ID\}"
 echo "Node: $\{SLURMD_NODENAME\}" 
 echo "Starting: "`date +"%D %T"`
 
-# copy and paste the following code chunk for each original .fastq file, as shown below:
+# copy and paste the following code chunk for each trimmed and paired .fastq file, as shown below:
 
 coverm genome \
   --coupled fastq/file1.trimmed.paired.fq1 fastq/file1.trimmed.paired.fq2 \ # this part changes (fastq files)
