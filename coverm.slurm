@@ -17,9 +17,11 @@ echo "Starting: "`date +"%D %T"`
 coverm genome \
   --coupled fastq/file1.trimmed.paired.fq1 fastq/file1.trimmed.paired.fq2 \ # this part changes (fastq files)
   --genome-fasta-files \ # this whole part stays the same (ALL high quality bins)
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
+# below, you must manually enter the ID numbers of the high quality bins you recorded based on checkM results
+# in the first line, write all high quality MIS bins, STA in the next, and MAB in the final line
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
   -t 8 \
   -m mean relative_abundance covered_fraction \
   -o coverm_output/file1.tsv 
@@ -27,9 +29,10 @@ coverm genome \
 coverm genome \
   --coupled fastq/file2.trimmed.paired.fq1 fastq/file2.trimmed.paired.fq2 \
   --genome-fasta-files \
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
-    bins_dir_SITE/bin.#.fa bins_dir_SITE/bin.#.fa \
+# the lines below should match the chunk above (map the same high quality bins to a new file for relative community composition)
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
+    bins_dir_SITE/bin.ID.fa bins_dir_SITE/bin.ID.fa \
   -t 8 \
   -m mean relative_abundance covered_fraction \
   -o coverm_output/file2.tsv
