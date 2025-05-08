@@ -13,6 +13,6 @@ echo "Node: $\{SLURMD_NODENAME\}"
 echo "Starting: "`date +"%D %T"`
 
 # this must be run individually for each high quality bin you wish to annotate
-prokka --outdir /path/to/prokka_results_bin1 --prefix annotation --kingdom Bacteria /path/to/bins_dir_SITE/bin.1.fa
+prokka --outdir /path/to/prokka_output/bin1 --prefix annotation --kingdom Bacteria /path/to/bins_dir_SITE/bin.1.fa
 
 echo "Ending: "`date +"%D %T"`
